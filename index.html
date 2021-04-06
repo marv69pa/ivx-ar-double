@@ -10,11 +10,11 @@
   <style>
 
     model-viewer {
-          width: 600px;
-          height: 800px;
+          width: 400px;
+          height: 600px;
           margin: 0 auto;
     }
-     #ar-button {
+    #ar-button {
     background-image: url(asset/ariconewhite.png);
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -64,9 +64,9 @@
   </style>
 
 <body>
-  <model-viewer src="asset/IVX Surfaces4-Double.glb" ar ar-modes="webxr scene-viewer quick-look" ios-src="asset/IVX Surfaces4-Double.usdz" shadow-intensity="3.2" ar ar-scale="fixed" ar ar-placement="floor" exposure="0.69" shadow-softness="1" camera-controls ar autoplay auto-rotate="">
-    <button slot="ar-button" style="background-color: white; height:40px; width:120px; border-radius: 4px; border: 1px solid black; position: absolute; bottom: 16px; right: 20px; ">
-    View In Your Room
+  <model-viewer src="asset/IVX Surfaces4-Double.glb" ar ar-modes="webxr scene-viewer quick-look" ios-src="asset/IVX Surfaces4-Double.usdz" shadow-intensity="3.2" ar ar-scale="fixed" ar ar-placement="floor" exposure=".65" shadow-softness="1" camera-controls ar autoplay auto-rotate="">
+    <button slot="ar-button" id="ar-button">
+    View in your space
   </button>
   </model-viewer>
   <center><p><b>AR Viewer Test - Bally Design</b></p>
