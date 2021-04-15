@@ -2,8 +2,28 @@
 <html lang="en">
 
 <head>
+	<style>
+		*{
+		margin:0;
+		padding:0;
+		}
+		html{
+		height: 100%;
+		width: 100%;
+		}
+		body {
+		  height: 100%;
+		  width: 100%;
+		}
+		model-viewer{
+		height:100%;
+		width:100%;
+		}
+
+    </style>
+  
   <style type="text/css">
-   .mobileShow { display: none;}
+     .mobileShow { display: none;}
    /* Smartphone Portrait and Landscape */
    @media only screen
    and (min-device-width : 320px)
@@ -22,12 +42,11 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   <style>
-
-    model-viewer {
-          width: 400px;
-          height: 600px;
-          margin: 0 auto;
-    }
+      model-viewer{
+		height:550px;
+		width:400px;
+	        margin: 0 auto;
+		}
     #ar-button {
     background-image: url(asset/ariconewhite.png);
     background-repeat: no-repeat;
@@ -63,7 +82,7 @@
     model-viewer > #ar-prompt {
     position: absolute;
     left: 50%;
-    bottom: 175px;
+    bottom: 165px;
     animation: elongate 2s infinite ease-in-out alternate;
     display: none;
   }
@@ -78,11 +97,9 @@
   </style>
 
 <body>
-  <model-viewer src="asset/IVX Station AR Double_Final.glb" ar ar-modes="webxr scene-viewer quick-look" ios-src="asset/IVX Station AR Double_Final.usdz" shadow-intensity="5.0" environment-image="asset/workshop.hdr" ar-scale="fixed" ar ar-placement="floor" exposure="1.2" shadow-softness="1" camera-controls ar autoplay auto-rotate="">
-    <button slot="ar-button" id="ar-button">
-    View in your space
-  </button>
-  </model-viewer>
+     <model-viewer src="asset/IVX Station AR Double_Final.glb" ar ar-modes="webxr scene-viewer quick-look" ios-src="asset/IVX Station AR Double_Final.usdz" shadow-intensity="5.0" environment-image="asset/workshop.hdr" ar-scale="fixed" ar ar-placement="floor" exposure="1.2" shadow-softness="1" camera-controls ar autoplay auto-rotate="">
+    <button slot="ar-button" id="ar-button"> View in your space </button> </model-viewer>
+    
   <center><p><style>
   h4 {
     font-family: Verdana, "Open Sans", sans-serif;
@@ -93,12 +110,14 @@
   }
 </style>
     <div class="mobileShow">
-<h4>IVX Station Side by Side AR Viewer</h4>
-<p>Rotate IVX Station with finger and pinch in and out to zoom</p><br><p> Once AR mode is started move phone slowly to find the floor then move/rotate model with finger and tap to place.</p></p>
+<picture>
+    <img src="asset/mobile_controls.png" style="max-width:100%;height:auto;">
+</picture>
 </div>
   <div class="mobileHide">
-<h4>IVX Station Side by Side AR Viewer</h4>
-<p>To rotate IVX Station use left mouse click/hold and slide back and forth <br>To zoom in use mouse scroll button</p><br><p>To view IVX Station in your space with AR please visit this website on a mobile device.</p></p>
+<picture>
+    <img src="asset/web_controls.png" style="width:450px;height:160px;">
+</picture>
 </div>
 
   
